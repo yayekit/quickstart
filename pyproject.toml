@@ -12,5 +12,9 @@ dependencies = [
 [project.scripts]
 quickstart-01-demo = "quickstart.01_getting_started:main"
 
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
 [tool.setuptools]
 packages = ["quickstart"]
