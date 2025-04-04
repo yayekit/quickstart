@@ -12,7 +12,7 @@ def process_customer(customer_id: str) -> str:
     return f"Processed {customer_id}"
 
 @flow
-def customer_processing_flow() -> list[str]:
+def main() -> list[str]:
     customer_ids = get_customer_ids()
     # Map the process_customer task across all customer IDs
     results = process_customer.map(customer_ids)
@@ -20,4 +20,4 @@ def customer_processing_flow() -> list[str]:
 
 
 if __name__ == "__main__":
-    customer_processing_flow()
+    main()
