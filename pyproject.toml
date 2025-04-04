@@ -10,5 +10,5 @@ dependencies = [
 ]
 
 [project.scripts]
-quickstart-01-demo = "01_getting_started:main"
+quickstart-01-demo = "quickstart.01_getting_started:main"
 
