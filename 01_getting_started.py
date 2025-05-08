@@ -1,5 +1,7 @@
 from prefect import flow, task
+from prefect.logger import get_run_logger
 import random
+
 
 @task
 def get_customer_ids() -> list[str]:
@@ -9,6 +11,9 @@ def get_customer_ids() -> list[str]:
 @task
 def process_customer(customer_id: str) -> str:
     # Process a single customer
+    logger = get_run_logger()
+    for _ in range(50):
+        logger.info(f"Processing customer {customer_id}")
     return f"Processed {customer_id}"
 
 @flow
