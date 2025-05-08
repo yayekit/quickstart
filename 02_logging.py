@@ -1,5 +1,5 @@
 from prefect import flow, task
-from prefect.logger import get_run_logger
+from prefect.logging import get_run_logger
 import random
 
 
